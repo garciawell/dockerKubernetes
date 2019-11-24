@@ -1,8 +1,9 @@
 # Specify a base image
-FROM alpine
+FROM node:10-alpine
 
 # Install lsome dependencies
-RUN yarn Install
+COPY ./ ./
+RUN npm install
 
 # Default command
-CMD ["yarn", "start"]
+CMD ["npm", "start"]
